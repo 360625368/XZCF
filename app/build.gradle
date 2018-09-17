@@ -61,4 +61,6 @@ dependencies {
     // TableView
     implementation 'com.evrencoskun.library:tableview:0.8.6'
     implementation 'com.azhon:appupdate:1.5.2'
+
+    implementation 'com.koushikdutta.async:androidasync:2.+'
 }
