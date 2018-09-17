@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="@dimen/offset_10dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvIndexName_L"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_5dp"
+            android:textColor="#FF36383C"
+            android:textSize="@dimen/font_size_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_L"
+            android:layout_width="140dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/offset_5dp"
+            android:background="#FFF0F2F5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIndexName_L" />
+
+        <TextView
+            android:id="@+id/tvCurrentPoints_L"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_5dp"
+            android:textColor="#FF50C948"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_L" />
+
+        <TextView
+            android:id="@+id/tvPrice_L"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_2dp"
+            android:textColor="#FF36383C"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvRate_L"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentPoints_L" />
+
+        <TextView
+            android:id="@+id/tvRate_L"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_2dp"
+            android:textColor="#FF36383C"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvPrice_L"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentPoints_L" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="55dp"
+        android:background="#F0F2F5" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvIndexName_R"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_5dp"
+            android:textColor="#FF36383C"
+            android:textSize="@dimen/font_size_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_R"
+            android:layout_width="140dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/offset_5dp"
+            android:background="#FFF0F2F5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIndexName_R" />
+
+        <TextView
+            android:id="@+id/tvCurrentPoints_R"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_5dp"
+            android:textColor="#FF50C948"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_R" />
+
+        <TextView
+            android:id="@+id/tvPrice_R"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_2dp"
+            android:textColor="#FF36383C"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvRate_R"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentPoints_R" />
+
+        <TextView
+            android:id="@+id/tvRate_R"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/offset_2dp"
+            android:textColor="#FF36383C"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvPrice_R"
+            app:layout_constraintTop_toBottomOf="@+id/tvCurrentPoints_R" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

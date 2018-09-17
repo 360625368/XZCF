@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+
+    <!--涨-->
+    <LinearLayout
+        android:id="@+id/ll_stock_rank_up"
+        android:orientation="horizontal"
+        style="@style/stock_list_sort"
+        >
+
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/iv_stock_rank_up_arrow"
+                android:layout_width="@dimen/offset_15dp"
+                android:layout_height="@dimen/offset_15dp"
+                android:background="@drawable/ic_arrow_expand"
+                android:textSize="@dimen/font_size_12sp"
+                />
+
+            <TextView
+                android:text="@string/stock_rank_item_title_up"
+                style="@style/stock_list_sort_txt"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:text="@string/customize_stock_sort_price"
+                style="@style/stock_list_sort_txt"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:text="@string/customize_stock_sort_turnover"
+                style="@style/stock_list_sort_txt"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ll_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+
+    <!--跌-->
+    <LinearLayout
+        android:id="@+id/ll_stock_rank_down"
+        android:orientation="horizontal"
+        style="@style/stock_list_sort"
+        >
+
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/iv_stock_rank_down_arrow"
+                android:layout_width="@dimen/offset_15dp"
+                android:layout_height="@dimen/offset_15dp"
+                android:background="@drawable/ic_arrow_expand"
+                android:textSize="@dimen/font_size_12sp"
+                />
+
+            <TextView
+                android:text="@string/stock_rank_item_title_down"
+                style="@style/stock_list_sort_txt"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:text="@string/customize_stock_sort_price"
+                style="@style/stock_list_sort_txt"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:text="@string/customize_stock_sort_turnover"
+                style="@style/stock_list_sort_txt"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ll_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+
+</LinearLayout>

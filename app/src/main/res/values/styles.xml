@@ -1,0 +1,90 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyTheme" parent="Theme.AppCompat.NoActionBar" />
+
+
+    <!--指数_标题-->
+    <style name="stock_index_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_14sp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    <!--指数_点数下降-->
+    <style name="stock_index_point_down">
+        <item name="android:textColor">@color/stock_index_down</item>
+        <item name="android:textSize">@dimen/font_size_20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--指数_点数上升-->
+    <style name="stock_index_point_up">
+        <item name="android:textColor">@color/stock_index_up</item>
+        <item name="android:textSize">@dimen/font_size_20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!--指数_箭头-->
+    <style name="stock_index_arrow">
+        <item name="android:layout_width">@dimen/offset_13dp</item>
+        <item name="android:layout_height">@dimen/offset_13dp</item>
+        <item name="android:layout_marginStart">@dimen/offset_5dp</item>
+    </style>
+
+    <!--指数_涨跌率_成交量-->
+    <style name="stock_index_rate_turnover">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">@dimen/font_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="stock_list_sort">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/offset_35dp</item>
+        <item name="android:background">@color/stock_sort_bg</item>
+    </style>
+
+    <style name="stock_list_sort_txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/stock_sort_txt</item>
+        <item name="android:textSize">@dimen/font_size_12sp</item>
+    </style>
+
+    <style name="stock_buy_control_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/offset_45dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/ic_buy_control_bg</item>
+        <item name="android:layout_marginStart">@dimen/offset_5dp</item>
+        <item name="android:layout_marginTop">@dimen/offset_10dp</item>
+        <item name="android:layout_marginEnd">@dimen/offset_5dp</item>
+    </style>
+
+    <style name="stock_buy_dialog_layout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/offset_10dp</item>
+    </style>
+
+    <style name="stock_buy_dialog_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_size_16sp</item>
+        <item name="android:layout_marginStart">@dimen/offset_10dp</item>
+    </style>
+
+</resources>

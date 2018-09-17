@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/stock_buy_bg"
+    android:orientation="vertical"
+    >
+
+    <!--导航栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/offset_0dp"
+        android:layout_weight="0.5"
+        android:background="@color/colorPrimaryDark"
+        >
+
+        <ImageButton
+            android:id="@+id/iBtnBack"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/back_label"
+            android:padding="@dimen/offset_10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_stock_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stock_buy_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_18sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_stock_buy_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_12sp"
+                />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_stock_buy_refresh"
+            android:layout_width="@dimen/offset_25dp"
+            android:layout_height="@dimen/offset_25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/offset_20dp"
+            android:background="@drawable/ic_stock_refresh"
+            android:checked="false"
+            />
+
+
+    </RelativeLayout>
+
+
+    <!--输入框、五档-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/offset_0dp"
+        android:layout_weight="2.7"
+        android:orientation="horizontal"
+        >
+
+        <!--股票信息-->
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.6"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <!--股票-->
+            <LinearLayout
+                style="@style/stock_buy_control_bg"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <!--证券-->
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stock_buy_stock_zhengquan"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+                </LinearLayout>
+
+                <!--输入-->
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    >
+
+                    <EditText
+                        android:id="@+id/edt_zhengquan_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/stock_buy_stock_daima"
+                        android:inputType="number"
+                        android:textSize="@dimen/font_size_10sp"
+                        android:maxLength="6"
+                        />
+
+
+                </LinearLayout>
+
+                <!--名称-->
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_zhengquan_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+
+                </LinearLayout>
+
+                <!--搜索-->
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_zhengquan_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_stock_buy_search"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <!--限价-->
+            <LinearLayout
+                style="@style/stock_buy_control_bg"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <!--限价-->
+                <LinearLayout
+                    android:id="@+id/ll_xianjia"
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_xianjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stock_buy_xianjia_dialog_xianjia"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_stock_buy_arrow"
+                        />
+
+                </LinearLayout>
+
+                <!--输入-->
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    >
+
+                    <EditText
+                        android:id="@+id/edt_xianjia_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/stock_buy_stock_jiage"
+                        android:inputType="numberDecimal"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+                </LinearLayout>
+
+                <!--加减-->
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_xianjia_reduce"
+                        android:layout_width="@dimen/offset_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_stock_buy_reduce"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_xianjia_add"
+                        android:layout_width="@dimen/offset_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_stock_buy_add"
+                            />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--涨停、跌停-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/font_size_10sp"
+                android:layout_marginTop="@dimen/offset_5dp"
+                android:orientation="horizontal"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="0.4"
+                >
+
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stock_buy_zhangting"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_zhangting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/stock_index_up"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/offset_10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stock_buy_dieting"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_dieting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/stock_index_down"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--数量-->
+            <LinearLayout
+                style="@style/stock_buy_control_bg"
+                android:layout_marginTop="@dimen/offset_5dp"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <!--数量-->
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stock_buy_stock_shuliang"
+                        android:textSize="@dimen/font_size_10sp"
+                        />
+
+
+                </LinearLayout>
+
+                <!--输入-->
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/offset_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        >
+
+                        <EditText
+                            android:id="@+id/edt_shuliang_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="@dimen/font_size_12sp"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/offset_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/stock_buy_stock_gu"
+                            android:textSize="@dimen/font_size_10sp"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <!--加减-->
+                <LinearLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_shuliang_reduce"
+                        android:layout_width="@dimen/offset_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_stock_buy_reduce"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_shuliang_add"
+                        android:layout_width="@dimen/offset_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_stock_buy_add"
+                            />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--可买量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/offset_10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="0.6"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stock_buy_kemai"
+                    android:textSize="@dimen/font_size_10sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_kemai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/stock_index_up"
+                    android:textSize="@dimen/font_size_10sp"
+                    />
+
+
+            </LinearLayout>
+            <!--可买单选-->
+            <RadioGroup
+                android:id="@+id/rg_buy"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="0.8"
+                >
+
+                <RadioButton
+                    android:id="@+id/rb_buy_all"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/offset_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_stock_buy_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="@string/stock_buy_kemai_quanbu"
+                    android:textSize="@dimen/font_size_12sp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_buy_half"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/offset_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_stock_buy_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="@string/stock_buy_kemai_half"
+                    android:textSize="@dimen/font_size_12sp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_buy_third"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/offset_5dp"
+                    android:layout_marginStart="@dimen/offset_5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_stock_buy_selector"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:text="@string/stock_buy_kemai_third"
+                    android:textSize="@dimen/font_size_12sp"
+                    />
+
+            </RadioGroup>
+            <!--买入-->
+            <LinearLayout
+                android:id="@+id/ll_buy"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="@dimen/offset_5dp"
+                android:layout_marginStart="@dimen/offset_10dp"
+                android:layout_marginTop="@dimen/offset_15dp"
+                android:background="@drawable/ic_buy_bg"
+                android:gravity="center"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="0.9"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stock_buy_title"
+                    android:textColor="@color/white"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--五档-->
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/offset_5dp"
+            android:layout_marginStart="@dimen/offset_5dp"
+            android:layout_marginTop="@dimen/font_size_10sp"
+            android:layout_weight="2.2"
+            android:background="@drawable/ic_buy_control_five_bg"
+            android:orientation="vertical"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_sell_five"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                />
+
+            <!--分割线-->
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0.3dp"
+                android:background="@color/market_speed"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_buy_five"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--买入列表-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/offset_0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        >
+
+        <!--标题-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/offset_30dp"
+            android:background="#FFF3F3F3"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/offset_16dp"
+            android:paddingStart="@dimen/offset_16dp"
+            >
+
+            <LinearLayout
+                android:layout_width="@dimen/offset_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:gravity="center_vertical|start"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stock_buy_list_zq"
+                    android:textSize="@dimen/font_size_14dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/offset_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center_vertical|end"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stock_buy_list_sl"
+                    android:textSize="@dimen/font_size_14dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/offset_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center_vertical|end"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stock_buy_list_xj"
+                    android:textSize="@dimen/font_size_14dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/offset_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:gravity="center_vertical|end"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stock_buy_list_yk"
+                    android:textSize="@dimen/font_size_14dp"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--列表-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_buy_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">小招资讯通</string>
+    <string name="home_title">首页</string>
+    <string name="stock_title">行情</string>
+    <string name="info_title">资讯</string>
+    <string name="mine_title">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_label">返回</string>
+    <string name="search_label">搜索</string>
+    <string name="customize_stock">自选</string>
+    <string name="hs_stock">深证</string>
+    <string name="sh_stock">沪证</string>
+    <string name="entrepreneurship_stock">创业</string>
+    <string name="small_stock">中小</string>
+    <string name="personal_center_title">个人中心</string>
+    <string name="shangz_stock_index_title">上证指数</string>
+    <string name="shenz_stock_index_title">深证证指数</string>
+    <string name="cy_stock_index_title">创业指数</string>
+    <string name="zx_stock_index_title">中小指数</string>
+    <string name="customize_stock_add">添加自选</string>
+    <string name="customize_stock_sort_all">全部</string>
+    <string name="customize_stock_sort_price">现价</string>
+    <string name="customize_stock_sort_rate">涨跌</string>
+    <string name="customize_stock_sort_turnover">涨幅</string>
+
+    <string name="home_index_current_price_format">%+.2f</string>
+    <string name="home_index_rising_falling_rate_format">%+.2f%%</string>
+    <string name="home_index_current_points_format">%.2f</string>
+
+    <string name="stock_rank_item_title_up">涨幅榜</string>
+    <string name="stock_rank_item_title_down">跌幅榜</string>
+
+    <string name="stock_market_buy">买入</string>
+    <string name="stock_market_sell">卖出</string>
+    <string name="stock_market_undo">撤单</string>
+    <string name="stock_market_today">今开</string>
+    <string name="stock_market_yesterday">昨收</string>
+    <string name="stock_market_k_minute">分时</string>
+    <string name="stock_market_k_five">五日</string>
+    <string name="stock_market_k_day">日K</string>
+    <string name="stock_market_k_week">周K</string>
+    <string name="stock_market_k_month">月K</string>
+    <string name="stock_self_add_tip">自选添加成功</string>
+    <string name="stock_self_del_tip">自选删除成功</string>
+    <string name="stock_market_k_minute_five_speed">五档</string>
+    <string name="stock_market_k_minute_detail">明细</string>
+    <string name="stock_buy_title">买入</string>
+    <string name="stock_buy_zhangting">涨停:</string>
+    <string name="stock_buy_dieting">跌停:</string>
+    <string name="stock_buy_kemai">可买:</string>
+    <string name="stock_buy_kemai2">可卖:</string>
+    <string name="stock_buy_kemai_quanbu">全部</string>
+    <string name="stock_buy_kemai_half">1/2</string>
+    <string name="stock_buy_kemai_third">1/3</string>
+    <string name="stock_buy_stock_zhengquan">证券</string>
+    <string name="stock_buy_stock_daima">代码</string>
+    <string name="stock_buy_stock_xianjia">限价</string>
+    <string name="stock_buy_stock_jiage">价格</string>
+    <string name="stock_buy_stock_shuliang">数量</string>
+    <string name="stock_buy_stock_gu">(股)</string>
+    <string name="stock_buy_list_zq">证券/市值</string>
+    <string name="stock_buy_list_sl">数量/可用</string>
+    <string name="stock_buy_list_xj">现价/成本</string>
+    <string name="stock_buy_list_yk">盈亏/比例</string>
+    <string name="stock_buy_xianjia_dialog_title">委托方式选择</string>
+    <string name="stock_buy_xianjia_dialog_xianjia">现价</string>
+    <string name="stock_buy_xianjia_dialog_xianjia2">限价</string>
+    <string name="stock_buy_xianjia_dialog_cancel">取消</string>
+    <string name="stock_buy_xianjia_dialog_confirm">确定</string>
+    <string name="stock_buy_dialog_title">买入确认</string>
+    <string name="stock_sell_dialog_title">卖出确认</string>
+    <string name="stock_buy_dialog_zhengquanmingcheng">证券名称:</string>
+    <string name="stock_buy_dialog_zhengquandaima">证券代码:</string>
+    <string name="stock_buy_dialog_baojiafangshi">报价方式:</string>
+    <string name="stock_buy_dialog_weituojiage">委托价格:</string>
+    <string name="stock_buy_dialog_weituoshuliang">委托数量:</string>
+    <string name="stock_sell_title">卖出</string>
+    <string name="stock_buy_info_title">交易信息</string>
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+
+    <!--K线图-->
+    <RelativeLayout
+
+        android:layout_width="@dimen/offset_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.9"
+        >
+
+
+        <com.guoziwei.klinelib.chart.TimeLineView
+            android:id="@+id/time_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_time_line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </RelativeLayout>
+
+    <!--五档/明细-->
+    <LinearLayout
+        android:id="@+id/ll_market_detail"
+        android:layout_width="@dimen/offset_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/offset_0dp"
+            android:layout_weight="0.3"
+            android:orientation="horizontal"
+            >
+
+            <!--五档-->
+            <RelativeLayout
+                android:id="@+id/rl_market_speed"
+                android:layout_width="@dimen/offset_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/market_speed"
+                >
+
+                <TextView
+                    android:id="@+id/tv_market_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/stock_market_k_minute_five_speed"
+                    android:textColor="@color/white"
+                    />
+
+            </RelativeLayout>
+
+            <!--明细-->
+            <RelativeLayout
+                android:id="@+id/rl_market_detail"
+                android:layout_width="@dimen/offset_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/market_speed_focus"
+                >
+
+                <TextView
+                    android:id="@+id/tv_market_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/stock_market_k_minute_detail"
+                    android:textColor="@color/stock_tab_txt"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/offset_0dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_market_speed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_market_speed_sell"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/offset_0dp"
+                    android:layout_weight="1"
+                    />
+
+                <!--分割线-->
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/offset_0.01dp"
+                    android:background="@color/five_speed_line"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_market_speed_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/offset_0dp"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_market_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

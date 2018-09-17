@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical">
+
+
+    <!--证券名称-->
+    <LinearLayout
+        style="@style/stock_buy_dialog_layout"
+        >
+
+        <TextView
+            android:text="@string/stock_buy_dialog_zhengquanmingcheng"
+            style="@style/stock_buy_dialog_title"
+            />
+
+        <TextView
+            android:id="@+id/tv_buy_dialog_zqmc"
+            style="@style/stock_buy_dialog_title"
+            />
+
+    </LinearLayout>
+
+    <!--证券代码-->
+    <LinearLayout
+        style="@style/stock_buy_dialog_layout"
+        >
+
+        <TextView
+            style="@style/stock_buy_dialog_title"
+            android:text="@string/stock_buy_dialog_zhengquandaima"
+            />
+
+        <TextView
+            android:id="@+id/tv_buy_dialog_zqdm"
+            style="@style/stock_buy_dialog_title"
+            />
+
+    </LinearLayout>
+
+    <!--报价方式-->
+    <LinearLayout
+        style="@style/stock_buy_dialog_layout"
+        >
+
+        <TextView
+            style="@style/stock_buy_dialog_title"
+            android:text="@string/stock_buy_dialog_baojiafangshi"
+            />
+
+        <TextView
+            android:id="@+id/tv_buy_dialog_bjfs"
+            style="@style/stock_buy_dialog_title"
+            />
+
+    </LinearLayout>
+
+    <!--委托价格-->
+    <LinearLayout
+        style="@style/stock_buy_dialog_layout"
+        >
+
+        <TextView
+            style="@style/stock_buy_dialog_title"
+            android:text="@string/stock_buy_dialog_weituojiage"
+            />
+
+        <TextView
+            android:id="@+id/tv_buy_dialog_wtjg"
+            style="@style/stock_buy_dialog_title"
+            />
+
+    </LinearLayout>
+
+
+    <!--委托数量-->
+    <LinearLayout
+        style="@style/stock_buy_dialog_layout"
+        >
+
+        <TextView
+            style="@style/stock_buy_dialog_title"
+            android:text="@string/stock_buy_dialog_weituoshuliang"
+            />
+
+        <TextView
+            android:id="@+id/tv_buy_dialog_wtsl"
+            style="@style/stock_buy_dialog_title"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

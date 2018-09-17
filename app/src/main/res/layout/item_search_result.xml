@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingStart="@dimen/offset_16dp"
+    android:paddingEnd="@dimen/offset_16dp"
+    android:gravity="center_vertical|right"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#FF36383C"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvStockCode"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textColor="#FF91989E"
+        android:textSize="14sp" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnStockType"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/stock_type_bg_selector"
+        android:minWidth="44dp"
+        android:textColor="@drawable/stock_type_text_selector"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <CheckBox
+        android:visibility="gone"
+        android:id="@+id/cbStockCollect"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/stock_collect_cb_selector"
+        android:button="@null" />
+
+</LinearLayout>

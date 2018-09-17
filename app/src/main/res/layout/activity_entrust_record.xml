@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.EntrustRecordActivity">
+
+    <include
+        android:id="@+id/actionBar"
+        layout="@layout/include_action_bar" />
+
+    <LinearLayout
+        android:id="@+id/llContext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionBar">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="#FFAF142D"
+            app:tabIndicatorHeight="@dimen/offset_2dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#FFAF142D"
+            app:tabTextColor="#FF36383C" />
+
+
+        <com.evrencoskun.tableview.TableView
+            android:id="@+id/table_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            app:column_header_height="@dimen/table_column_header_height"
+            app:row_header_width="0dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

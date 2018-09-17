@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/table_cell_height"
+    android:background="@color/tableCellBgColor"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingEnd="@dimen/offset_8dp"
+        android:paddingStart="@dimen/offset_8dp"
+        android:text="hello"
+        android:textColor="@color/tableCellTextColor"
+        android:textSize="@dimen/font_size_16dp" />
+
+</LinearLayout>

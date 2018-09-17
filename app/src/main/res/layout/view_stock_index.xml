@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/offset_180dp"
+    android:orientation="vertical"
+    android:background="@color/black"
+    >
+    <!--指数 Banner-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/offset_0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <!--上证-->
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <!--名称-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tv_shangz_index_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/stock_index_title"
+                    />
+
+
+            </RelativeLayout>
+
+            <!--当前点数-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_shangz_index_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_point_down"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_shangz_index_arrow"
+                        style="@style/stock_index_arrow"
+                        />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!--涨跌率、成交量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/tv_shangz_index_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_rate_turnover"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_shangz_index_turnover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_rate_turnover"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--深证-->
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <!--名称-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tv_shenz_index_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/stock_index_title"
+                    />
+
+
+            </RelativeLayout>
+
+            <!--当前点数-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_shenz_index_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_point_down"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_shenz_index_arrow"
+                        style="@style/stock_index_arrow"
+                        />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!--涨跌率、成交量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/tv_shenz_index_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_rate_turnover"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_shenz_index_turnover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_rate_turnover"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/offset_0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <!--创业-->
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <!--名称-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tv_cy_index_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/stock_index_title"
+                    />
+
+
+            </RelativeLayout>
+
+            <!--当前点数-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_cy_index_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_point_down"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_cy_index_arrow"
+                        style="@style/stock_index_arrow"
+                        />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!--涨跌率、成交量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/tv_cy_index_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_rate_turnover"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_cy_index_turnover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_rate_turnover"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!--中小-->
+        <LinearLayout
+            android:layout_width="@dimen/offset_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <!--名称-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tv_zx_index_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/stock_index_title"
+                    />
+
+
+            </RelativeLayout>
+
+            <!--当前点数-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_zx_index_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_point_up"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_zx_index_arrow"
+                        style="@style/stock_index_arrow"
+                        />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!--涨跌率、成交量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offset_0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/tv_zx_index_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_rate_turnover"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/offset_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_zx_index_turnover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/stock_index_rate_turnover"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/offset_16dp"
+        android:paddingBottom="@dimen/offset_6dp"
+        android:paddingTop="@dimen/offset_6dp"
+        android:text="热门股票"
+        android:textColor="#FFEF3636"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/offset_16dp"
+        android:layout_marginStart="@dimen/offset_16dp"
+        android:background="#F0F2F5" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvHotStocks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

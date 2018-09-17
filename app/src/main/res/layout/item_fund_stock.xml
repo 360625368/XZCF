@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_fund_stock"
+    android:layout_width="match_parent"
+    android:layout_height="51dp"
+    android:background="#FFFFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/offset_16dp"
+    android:paddingStart="@dimen/offset_16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvStockName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center_vertical|start"
+            android:textColor="#FF36383C"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_size_14dp" />
+
+        <TextView
+            android:id="@+id/tvCountAll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical|end"
+            android:textColor="#FF6F7479"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_size_14dp" />
+
+        <TextView
+            android:id="@+id/tvNowPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical|end"
+            android:textColor="#FF6F7479"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_size_14dp" />
+
+        <TextView
+            android:id="@+id/tvProfitLossAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center_vertical|end"
+            android:textColor="#FFEF3636"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_size_14dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvNowAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center_vertical|start"
+            android:textColor="#FF6F7479"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_size_14dp" />
+
+        <TextView
+            android:id="@+id/tvCountCan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical|end"
+            android:textColor="#FF6F7479"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_size_14dp" />
+
+        <TextView
+            android:id="@+id/tvCostPriceOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical|end"
+            android:textColor="#FF6F7479"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_size_14dp" />
+
+        <TextView
+            android:id="@+id/tvProfitLossScale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center_vertical|end"
+            android:textColor="#FFEF3636"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/font_size_14dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
