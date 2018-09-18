@@ -21,6 +21,8 @@ import com.xzcf.R;
 import com.xzcf.data.data.DataManager;
 import com.xzcf.data.data.StockDataManager;
 import com.xzcf.data.data.response.GetAdvertiseResponse;
+import com.xzcf.data.data.socket.BaseSocketRes;
+import com.xzcf.data.data.socket.SocketSub;
 import com.xzcf.ui.WebActivity;
 import com.xzcf.ui.adapters.HomeHotStockAdapter;
 import com.xzcf.ui.adapters.HomeIndexViewPagerAdapter;
@@ -45,7 +47,7 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseSocketFragment<BaseSocketRes<String>> {
 
 
     @BindView(R.id.llContext)
@@ -94,7 +96,10 @@ public class HomeFragment extends BaseFragment {
             statusBar.getLayoutParams().height = UiUtils.getStatusBarHeight(getContext());
             bindView(llContext);
 
+            String qid = "1";
+            String path = "/stkdata?obj=SH601519&field=ZuiXinJia,ZhangDie,ZhangFu&sub=1" + "&" + qid;
 
+            addSocketSub(new SocketSub(qid,path));
         }catch(Exception ex){
             ex.printStackTrace();
         }
@@ -105,6 +110,7 @@ public class HomeFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         loadData();
+        notiftSubChange();
     }
 
     @Override
@@ -129,6 +135,11 @@ public class HomeFragment extends BaseFragment {
         }catch(Exception ex){
             ex.printStackTrace();
         }
+    }
+
+    @Override
+    protected void onSocketReceive(BaseSocketRes<String> result, String rawJson) {
+
     }
 
     @Override
@@ -298,6 +309,7 @@ public class HomeFragment extends BaseFragment {
 //                stockIndexDisposable.dispose();
 //                stockIndexDisposable = null;
 //            }
+
             stockIndexDisposable = StockDataManager.getInstance().getStockIndex()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())

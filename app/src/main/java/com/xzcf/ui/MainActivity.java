@@ -1,6 +1,7 @@
 package com.xzcf.ui;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -13,6 +14,7 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.azhon.appupdate.manager.DownloadManager;
 import com.xzcf.App;
 import com.xzcf.R;
+import com.xzcf.service.WebSocketService;
 import com.xzcf.ui.adapters.MainViewPagerAdapter;
 import com.xzcf.ui.fragments.HomeFragment;
 import com.xzcf.ui.fragments.MineFragment;
@@ -38,6 +40,9 @@ public class MainActivity extends BaseActivity implements HomeFragment.Listener,
         ButterKnife.bind(this);
         requestPermission();
         checkLoginStatus();
+
+        Intent intent = new Intent(this, WebSocketService.class);
+        startService(intent);
 
         viewPager.setAdapter(new MainViewPagerAdapter(getFM()));
 

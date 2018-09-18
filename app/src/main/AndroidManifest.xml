@@ -43,6 +43,8 @@
             android:name=".ui.StockKChartDetailActivity"
             android:screenOrientation="landscape"/>
 
+        <service android:name=".service.WebSocketService"/>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}"
